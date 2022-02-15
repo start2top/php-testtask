@@ -1,4 +1,3 @@
-
 <!-- 1.php -->
 <!DOCTYPE html>
 <html lang="en">
@@ -28,6 +27,7 @@
    <?php  
         echo '<br>'; 
         echo '<br>';
+        //Если получена информация из форм, выводим ответ на экран
         if ($_GET != array()) {
             require_once '2.php';
             echo $result;
