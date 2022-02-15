@@ -22,14 +22,17 @@
         <input type="submit">
     </form>
     <!-- Внешняя передача на url 2.php -->
-    <?php $url = 'https://test-task000.000webhostapp.com/2.php' . '?' . http_build_query($_GET);?>     
+    <?php $url = 'testtask' . '?' . http_build_query($_GET);?>     
     <a href="<?php echo $url; ?>">2.php</a>
     <!-- вывод ответа сервера на метод запроса -->
    <?php  
         echo '<br>'; 
         echo '<br>';
-        echo 'Ответ :';
-        include_once '2.php';
+        if ($_GET != array()) {
+            require_once '2.php';
+            echo $result;
+        }
+        
 
    ?>
 
